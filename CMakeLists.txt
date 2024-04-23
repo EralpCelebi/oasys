@@ -2,14 +2,14 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.1...3.29)
 
 MESSAGE(STATUS "OaSYS.Kernel")
 
-OPTION(CONFIG_EFI "Boot: Builds EFI-capable image." ON)
+OPTION(CONFIG_BOOT_EFI "Boot: Builds EFI-capable image." ON)
 
 PROJECT(
 	OASYS
 	VERSION 1.1.1.1
 	LANGUAGES C ASM)
 
-IF(CONFIG_EFI)
+IF(CONFIG_BOOT_EFI)
 	add_subdirectory(boot)
 ENDIF()
 

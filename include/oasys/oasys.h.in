@@ -10,4 +10,4 @@
 
 // Feat: Feature Flags.
 
-#cmakedefine OASYS_CONFIG_EFI @CONFIG_EFI@
+#cmakedefine OASYS_CONFIG_BOOT_EFI @CONFIG_BOOT_EFI@
