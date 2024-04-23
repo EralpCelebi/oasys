@@ -1,0 +1,13 @@
+#pragma once
+
+// Docs: Version Information.
+
+#cmakedefine OASYS_VERSION_MAJOR @OASYS_VERSION_MAJOR@
+#cmakedefine OASYS_VERSION_MINOR @OASYS_VERSION_MINOR@
+#cmakedefine OASYS_VERSION_PATCH @OASYS_VERSION_PATCH@
+#cmakedefine OASYS_VERSION_TWEAK @OASYS_VERSION_TWEAK@
+#cmakedefine OASYS_VERSION "@OASYS_VERSION@"
+
+// Feat: Feature Flags.
+
+#cmakedefine OASYS_CONFIG_EFI @CONFIG_EFI@
