@@ -16,7 +16,7 @@ Revision History
 
 --*/
 
-#include "lib.h"
+#include <efi/lib.h>
 
 //
 // LibInitialized - TRUE once InitializeLib() is called for the first time
