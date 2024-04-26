@@ -4,7 +4,7 @@ MESSAGE(STATUS "OaSYS.Kernel")
 
 PROJECT(
 	OASYS
-	VERSION 1.1.1.2
+	VERSION 1.1.2
 	LANGUAGES C ASM)
 
 SET(SCRIPTS ${PROJECT_SOURCE_DIR}/scripts)
@@ -13,3 +13,7 @@ INCLUDE(${SCRIPTS}/OaSYS.cmake)
 CONFIGURE_FILE(
     "${PROJECT_SOURCE_DIR}/include/oasys/oasys.h.in"
     "${PROJECT_BINARY_DIR}/include/oasys/oasys.h")
+
+CONFIGURE_FILE(
+		"${PROJECT_SOURCE_DIR}/include/oasys/oasys.h.in"
+		"${PROJECT_BINARY_DIR}/boot/include/oasys/oasys.h")
