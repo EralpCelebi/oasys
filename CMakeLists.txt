@@ -13,7 +13,3 @@ INCLUDE(${SCRIPTS}/OaSYS.cmake)
 CONFIGURE_FILE(
     "${PROJECT_SOURCE_DIR}/include/oasys/oasys.h.in"
     "${PROJECT_BINARY_DIR}/include/oasys/oasys.h")
-
-CONFIGURE_FILE(
-		"${PROJECT_SOURCE_DIR}/include/oasys/oasys.h.in"
-		"${PROJECT_BINARY_DIR}/boot/include/oasys/oasys.h")
