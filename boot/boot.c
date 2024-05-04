@@ -1,5 +1,6 @@
 #include <efi.h>
 #include <efilib.h>
+
 #include <oasys/oasys.h>
 
 EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE* SystemTable) {
@@ -14,7 +15,6 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE* SystemTable) {
     Status = ST->ConIn->Reset(ST->ConIn, FALSE);
     if (EFI_ERROR(Status)) return Status;
 
-#ifdef CONFIG_BOOT_GREET
     CHAR16* Messages[] = { L"Architecture: ", L"Toolchain: ", L"Version: " };
     CHAR16* Outputs[]  = { CONFIG_ARCH L"\r\n", CONFIG_TOOLCHAIN L"\r\n", OASYS_VERSION L"\r\n" };
 
@@ -28,7 +28,6 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE* SystemTable) {
         Status = ST->ConIn->Reset(ST->ConIn, FALSE);
         if (EFI_ERROR(Status)) return Status;
     }
-#endif
 
     while ((Status = ST->ConIn->ReadKeyStroke(ST->ConIn, &Key)) == EFI_NOT_READY) {}
 

@@ -11,7 +11,7 @@ SET_PROPERTY(CACHE CONFIG_TOOLCHAIN PROPERTY STRINGS "gnu;llvm")
 # Conventional options.
 
 OPTION(CONFIG_BOOT "Boot: Builds an EFI-capable bootloader alongside the kernel." ON)
+CMAKE_DEPENDENT_OPTION(CONFIG_BOOT_LOAD "Boot: Load 'ELF' executable as kernel." ON "CONFIG_BOOT" OFF)
 CMAKE_DEPENDENT_OPTION(CONFIG_BOOT_PACK "Boot: Create EFI-capable boot media." ON "CONFIG_BOOT" OFF)
-CMAKE_DEPENDENT_OPTION(CONFIG_BOOT_GREET "Boot: Greet user." ON "CONFIG_BOOT" OFF)
 
 INCLUDE(${SCRIPTS}/OaSYS.BOOT.cmake)
