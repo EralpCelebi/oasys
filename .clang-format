@@ -54,5 +54,3 @@ SpacesInContainerLiterals: 'true'
 TabWidth: '4'
 UseTab: Never
 ColumnLimit: 120
-
-...
